@@ -5,92 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First HTML in Full Stack</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="result.html" method="GET">
-        <div>
-            <label> Name: <input type="text" name="name" placeholder="enter your name"> </label>
-        </div>
-        <div>
-            <label for="surname"> Surname:  </label>
-            <input type="text" id="surname" name="surname" size="20" maxlength="18" placeholder="enter your surname">
-        </div>
-        <div>
-            <label for="p-word">Password: </label>
-            <input type="password" id="p-word" name="p-word" id="">
-        </div>
-        <div>
-            <label for="gender">Gender: </label> <br>
-            <label for="gender-1">Male</label>
-            <input type="radio" name="gender" id="gender-1" value="male">
-            <label for="gender-2">Female</label>
-            <input type="radio" name="gender" id="gender-2" value="male">
-            <label for="gender-3">Other</label>
-            <input type="radio" name="gender" id="gender-3" value="other" checked>
-        </div>
+    <img src="hamburger.svg" alt="not loaded">
+    <div id="for_container">
+        <form action="result.html" method="GET" id="burger_form">
+            <h1>Create a burger!</h1>
+            <div>
+                <label>What type of protein would you like? <br><input type="text" name="buger_type" placeholder="Smashed is on trends"> </label>
+            </div>
+            <hr>
+            <div>
+                <label for="patty_number">How many patties would you like?</label>
+                <input name="patty_number" type="number" id="age" value="1" min="1" max="3" style="width: 150px;">
+            </div>
+            <div class="cooked_level">
+                <label for="doneness">How do you want your patty cooked? </label><br>
+                <span>Rare</span>
+                <input type="range" name="doneness" id="doneness" value="3" min="1" max="5">
+                <span>Well-Done</span>
+            </div>
+            <hr>
+            <div>
+                <label for="toppings">What toppings would you like?</label> <br>
+                <input type="checkbox" name="toppings" id="vec-1" value="onion" checked>
+                <label for="vec-1">Onion</label>
+                <input type="checkbox" name="toppings" id="vec-2" value="tomato">
+                <label for="vec-2">Tomato</label>
+                <input type="checkbox" name="toppings" id="vec-3" value="lettuce">
+                <label for="vec-3">Lettuce</label>
+            </div> 
+            <hr>
+            <div>
+                <label for="cheese">Would you like to add cheese? </label> <br>
+                <label for="gender-1">Yes</label>
+                <input type="radio" name="cheese" id="gender-1" value="1">
+                <label for="gender-2">No</label>
+                <input type="radio" name="cheese" id="gender-2" value="0">
+            </div>
+            <hr>
+            <div>
+                <label for="pick">What type of bun would you like? </label>
+                <select name="lessons" id="pick">
+                    <option value="java">Sesame</option>
+                    <option value="css" selected>Potato</option>
+                    <option value="js">Pretzel</option>
+                </select>
+            </div>
+            <hr>
+            <div>
+                <label for="lessons2">What sauce would you like? </label>
+                <input type="text" name="lesson" list="lessons" id="lessons2">
+                <datalist id="lessons">
+                    <option value="ketchup">
+                    <option value="mayo">
+                    <option value="mustard">
+                    <option value="sweet-chili">
+                    <option value="ranch">
+                    <option value="sweet and soure">
+                </datalist>
+            </div>
+            <hr>
+            <div>
+                <label for="extras">Anything else you want to add? </label>
+                <textarea name="extras" id="extras" cols="40" rows="3"></textarea>
+            </div>
+            <hr>
+            <input type="submit" value="Submit" class="submit_button">
+            <input type="reset" value="Reset my options" class="reset_button">
+        </form>
 
-        <div>
-            <label>My vehicle: </label> <br>
-            <input type="checkbox" name="vehicle" id="vec-1" value="bicycle" checked>
-            <label for="vec-1">Bicycle</label> <br>
-            <input type="checkbox" name="vehicle" id="vec-2" value="truck">
-            <label for="vec-2">Truck</label><br>
-            <input type="checkbox" name="vehicle" id="vec-3" value="car">
-            <label for="vec-3">Car</label><br>
-        </div>
-        <div>
-            <label for="age">Age: </label>
-            <input name="Age" type="number" id="age" placeholder="enter your age" min="1" max="150" step="3" style="width: 150px;">
-        </div>
-        <div>
-            <label for="qsearch">Search On the Website: </label>
-            <input id="qsearch" type="search" name="query" placeholder="search here">
-        </div>
-        <div>
-            <label for="favcolor">Select Your Fav Color: </label>
-            <input type="color" name="color" id="favcolor">
-        </div>
-        <div>
-            <label for="bday">Birthday: </label>
-            <input type="date" name="birthday" id="bday" min="2020-01-01" max="2023-01-01">
-        </div>
-        <div>
-            <label for="file">The File: </label>
-            <input type="file" name="thefile" id="file">
-        </div>
-        <div>
-            <label for="phone">Your mobile number: </label>
-            <input type="tel" name="telphone" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="xxx-xx-xx">
-        </div>
-        <div>
-            <label for="pick">Please select a lesson: </label>
-            <select name="lessons" id="pick">
-                <option value="java">Java</option>
-                <option value="html">HTML</option>
-                <option value="css" selected>CSS</option>
-                <option value="js">Javascript</option>
-                <option value="git">Git</option>
-                <option value="maven">Maven</option>
-            </select>
-        </div>
-        <div>
-            <label for="lessons2">Please select a lesson2: </label>
-            <input type="text" name="lesson" list="lessons" id="lessons2">
-            <datalist id="lessons">
-                <option value="java">
-                <option value="html">
-                <option value="css">
-                <option value="js">
-                <option value="git">
-                <option value="maven">
-            </datalist>
-        </div>
-
-
-        <br><br>
-        <input type="submit" value="send it to the server">
-        <br><br>
-        <input type="reset" value="Reset Them All">
-    </form>
+    </div>
+    
 </body>
 </html>

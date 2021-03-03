@@ -1,0 +1,13 @@
+#burger_form{
+    margin: 0 auto; 
+    width: 30%; 
+    border: 2px solid gray; padding: 10px;
+}
+
+.submit_button{
+    background-color: turquoise;
+}
+
+.reset_button{
+    background-color: burlywood;
+}
